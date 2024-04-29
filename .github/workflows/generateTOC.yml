@@ -1,0 +1,25 @@
+name: Markdown TOC Generation
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  generate_toc:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          
+      - name: Install Markdown TOC Generator
+        run: npm install -g markdown-toc@1.5.1
+        
+      - name: Generate Table of Contents
+        run: markdown-toc -i README.md
