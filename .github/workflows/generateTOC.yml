@@ -1,5 +1,4 @@
-- name: Install Markdown TOC Generator
-  run: npm install -g markdown-toc@^1.5
+name: Markdown TOC Generation
 on:
   push:
     branches:
