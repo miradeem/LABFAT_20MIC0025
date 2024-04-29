@@ -21,4 +21,4 @@ jobs:
         run: npm install -g markdown-toc@1.2.0
         
       - name: Generate Table of Contents
-        run: markdown-toc -i README.md
+        run: markdown-toc -i demo.md
